@@ -1,0 +1,173 @@
+# ****************************************************
+#
+#     tBGaTe project - Inserm CRCT (UMR1037)
+#
+# ****************************************************
+# This configure file allow to generate a complete GATE macro
+# with VARIAN TrueBeam
+# Use: set ALL parameters after each =WORD= tag
+# Only the line following the =TAG= is read
+
+
+
+# Visualisation 0 = no ; 1 = yes
+=VISU=
+0
+
+# Set Gantry angle (in deg). For arcs, set start angle [0 - 360]
+=GANTRY=
+0
+
+# For arcs, set stop angle (in deg). X = static field  [0 - 360] (Arc is being tested. Caution when use)
+=GANTRY_STOP=
+X
+
+# For arcs, set direction. 0 clockwise. 1 counter clockwise
+=ROTATION_DIRECTION=
+0
+
+# Set Collimator angle (in deg). For arcs, set start angle [-180 - 180]
+=COLLI=
+0
+
+# Set X1 (mm). Must be < 210
+=X1=
+
+
+# Set X2 (mm). Must be < 210
+=X2=
+
+
+# Set Y1 (mm). Must be < 210
+=Y1=
+
+
+# Set Y2 (mm). Must be < 210
+=Y2=
+
+
+# For arc set duration (s). Not read if static field
+=DURATION=
+4
+
+# For arc set number of steps. Recommended : duration + 1. Not read if static field
+=N_STEPS=
+5
+
+# MLC : 0 = no MLC ; 1 = static MLC ; 2 = dynamic MLC sequence (2 not Tested, to validate)
+=MLC=
+
+
+# MLC file : not read if no MLC
+=MLC_FILE=
+
+
+# Phantom or patient. Enter the .mac file name of a macro located in mac/ dir.
+# Ex. : waterBox800.mac. 0 for no phantom
+=PHANTOM=
+
+
+#Isocenter for patient simulation
+=ISO=
+
+
+
+# OUTPUT : Actor for data output. Enter the .mac file name of a macro located in mac/ dir.
+# Ex. : waterActor.mac or portalActor.mac
+=ACTOR=
+
+
+
+# EPID: 0 = without EPID ; 1 = with EPID ;
+=EPID=
+0
+
+# EPID DISTANCE: set the distance (cm) of EPID from the source
+# Must be < 151 cm .
+=EPID_DISTANCE=
+150
+
+# EPID ACTOR: Actor for data output in EPID. Enter the .mac file name of a macro located in mac/ dir
+=EPID_ACTOR=
+portalActor.mac
+
+# COUNTER ACTOR: Actor to create a particle counter mycounter.txt. 0 or 1
+=COUNTER_ACTOR=
+1
+
+# INPUT TYPE. N or R or M or E
+# N = Varian native IAEA files from myvarian.com. If N is chosen, phase space are attached to a plan
+# before jaws
+# R = Reduced files after collimator. If R is chosen, phase space are located after jaws
+# M = Reduced files after MLC. If M is chosen, phase space are located after MLC
+# E = Reduced files after APPLICATOR for electron beam simulation
+# User must check if files in input/ are N or R/M type
+=INPUT_TYPE=
+E
+
+# NUMBER OF INPUT .IAEAphsp FILES : T or <N> (a positive number)
+#
+# T = test. 1000 particles of the first file in input dir will be simulated
+# <N> (a number): uses only <N> first files from input/ or on cluster  
+# To read all Native add (+1) to the number of native PHSP for one ENERGY
+# Not read if Reduced files are used
+=INPUT=
+XXX
+
+
+# USE LOCAL DATA (L) OR PREPARE TO USE WITH DATA FILES ON CLUSTER (C)
+=DATA_LOCATION=
+C
+
+
+# REDUCE PHASE SPACE FILE NAME
+# Set your reduced PHSP file name
+# For instance : "10x10" , "patientTest" , 'Beam3' ...
+# Not read if Native files are used
+=PHSP_R_NAME=
+
+
+
+# NUMBER OF RECYCLING
+# Set the number of recyling of the reduced phase space
+# A positive number - For no Recycling use 1
+# Not read if Native files are used
+=RECYCLING=
+1
+
+
+# ENERGY (read only if DATA_LOCATION is C). Else use local data
+# Candidates are 6X 6FFF 10X 10FFF 6E 9E 12E 15E 18E
+# if an electron mode is selected X/Y jaws are automatically set depending on APPLICATOR
+# and X/Y user becomes insert size
+=ENERGY=
+
+
+# APPLICATOR (read only if ENERGY is set to an electron energy).
+# Candidates are : A10 A15 A20 
+# not read if photons
+=APPLICATOR=
+
+
+# INSERT (read only if ENERGY is set to an electron energy).
+# Candidates are : SQUARE or R4 R3 R2 R1 for Circle   
+# not read if photons
+=INSERT=
+
+
+
+# EXECUTE ON CLUSTER
+# 0 : just create the jobs
+# 1 : send to SALLE DES POMMES and launch using CONDOR
+# 2 : send to old UPS cluster and launch using CONDOR
+# option 2 does not work until files are not present on old cluster
+=EXECUTE_ON_CLUSTER=
+0
+
+
+#JOB NAME 
+# Set your job name prefix 
+# For instance : "10X3x3" , "patientTest" , "spectreElec" ...
+# must be one string
+=JOB_NAME=
+

@@ -1,0 +1,34 @@
+*********************** RT PLAN SUMARY ******************************
+
+
+GENERAL INFORMATION :
+
+     PATIENT Name : CECCATO^IRMA^CECCATO
+     PATIENT ID : 201610840
+     PATIENT Birth Date : 19281107
+
+
+TECHNICAL INFORMATION :
+
+     Number of Treatment Beams : 1
+
+     Beams Name : LIT Tumoral
+          Beams Type : STATIC
+          Radiation Type : ELECTRON
+          Nominal Energy : 6
+          X jaws opening : [-100.0, 100.0]
+          Y jaws opening : [-100.0, 100.0]
+          Isocenter position : [42.9703293625073, 87.191744250379, 52.34694083523]
+          UM : 225.725032671
+          Applicator ID : A10
+          Applicator type : ELECTRON_SQUARE
+          INSERT : perso
+          DSP : 1000
+          Gantry Angle : 30.0
+
+
+
+
+TECHNICAL INFORMATION DETAILED :
+
+

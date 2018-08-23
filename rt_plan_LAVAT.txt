@@ -1,0 +1,34 @@
+*********************** RT PLAN SUMARY ******************************
+
+
+GENERAL INFORMATION :
+
+     PATIENT Name : LAVAT^ERNEST
+     PATIENT ID : 201609197
+     PATIENT Birth Date : 19420109
+
+
+TECHNICAL INFORMATION :
+
+     Number of Treatment Beams : 1
+
+     Beams Name : JOue g
+          Beams Type : STATIC
+          Radiation Type : ELECTRON
+          Nominal Energy : 6
+          X jaws opening : [-100.0, 100.0]
+          Y jaws opening : [-100.0, 100.0]
+          Isocenter position : [-17.556438161345, 112.25301589076, -5.47174726728855]
+          UM : 547.0
+          Applicator ID : A10
+          Applicator type : ELECTRON_SQUARE
+          INSERT : diam 7
+          DSP : 1000
+          Gantry Angle : 40.0
+
+
+
+
+TECHNICAL INFORMATION DETAILED :
+
+
